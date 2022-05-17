@@ -6,6 +6,9 @@
     <parameters />
     <build-runners>
       <runner id="RUNNER_6" name="" type="Maven2">
+        <conditions>
+          <equals name="teamcity.build.branch.is_default" value="true" />
+        </conditions>
         <parameters>
           <param name="goals" value="clean test" />
           <param name="localRepoScope" value="agent" />
